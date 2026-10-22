@@ -162,7 +162,6 @@ h1, h2, h3, p { margin-top: 0; }
 }
 
 .hero-note { display: flex; align-items: center; gap: 11px; margin-top: 54px; color: var(--muted); font-size: 10px; letter-spacing: .025em; }
-.note-icon { color: var(--coral); font-size: 19px; }
 .hero-visual { position: relative; min-width: 0; }
 
 .photo-frame {
@@ -217,7 +216,6 @@ h1, h2, h3, p { margin-top: 0; }
 .welcome-strip { display: flex; min-height: 92px; align-items: center; justify-content: center; gap: clamp(20px, 4vw, 56px); background: var(--green); color: white; }
 .welcome-strip p { margin: 0; font-family: var(--serif); font-size: clamp(16px, 2.1vw, 24px); letter-spacing: .005em; }
 .welcome-strip p span { color: #e8b5bd; font-style: italic; }
-.welcome-sparkle { color: #e8b5bd; font-size: 21px; }
 .section-pad { padding-right: max(48px, calc((100vw - 1240px) / 2)); padding-left: max(48px, calc((100vw - 1240px) / 2)); }
 
 .about {
@@ -253,7 +251,6 @@ h1, h2, h3, p { margin-top: 0; }
 .staff-training h3 { font-size: 18px; }
 .staff-training ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; margin: 0; padding: 0; list-style: none; }
 .staff-training li { display: flex; align-items: flex-start; gap: 9px; color: var(--muted); font-size: 11px; line-height: 1.6; }
-.staff-training li::before { flex: 0 0 auto; color: var(--coral); content: "✳"; }
 
 .care-section { padding-top: 94px; padding-bottom: 94px; background: var(--paper); }
 .section-heading { max-width: 600px; margin: 0 auto; text-align: center; }
@@ -326,7 +323,6 @@ h1, h2, h3, p { margin-top: 0; }
 .contact-circle { position: absolute; top: 50%; left: 52%; width: 320px; aspect-ratio: 1; border: 1px solid rgba(255, 255, 255, .18); border-radius: 50%; transform: translate(-50%, -50%); }
 .circle-two { width: 235px; border-color: rgba(233, 184, 193, .46); }
 .contact-heart { position: absolute; top: 50%; left: 52%; color: #e9b8c1; font-family: var(--serif); font-size: 140px; line-height: 1; transform: translate(-50%, -53%); }
-.contact-flower { position: absolute; top: 40px; right: 8%; color: rgba(255, 255, 255, .25); font-size: 22px; }
 
 .site-footer { display: flex; min-height: 100px; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 96px, 1320px); margin: 0 auto; padding: 20px 0; }
 .footer-brand .brand-mark { width: 37px; height: 37px; }
@@ -374,7 +370,6 @@ h1, h2, h3, p { margin-top: 0; }
     .hero-stamp { top: 23px; right: -19px; width: 75px; height: 75px; font-size: 11px; }
     .welcome-strip { min-height: 83px; gap: 13px; padding: 15px; text-align: center; }
     .welcome-strip p { max-width: 285px; font-size: 17px; }
-    .welcome-sparkle { font-size: 16px; }
     .section-pad { padding-right: 24px; padding-left: 24px; }
     .about { min-height: unset; grid-template-columns: 1fr; gap: 35px; padding-top: 72px; padding-bottom: 74px; }
     .about-art { width: min(88%, 330px); }
