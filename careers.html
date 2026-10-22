@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore career opportunities with Cherie's Tender Care LLC and download an employment application.">
+    <meta name="theme-color" content="#fbf8f2">
+    <title>Careers | Cherie's Tender Care LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Cherie's Tender Care LLC home">
+            <span class="brand-mark">
+                <svg viewBox="0 0 40 40" fill="none"><path d="M20 33s-13-7.9-13-17a7.5 7.5 0 0 1 13-5.1A7.5 7.5 0 0 1 33 16c0 9.1-13 17-13 17Z" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21h5l2-4 3 8 2-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="brand-name">Cherie's <span>Tender Care LLC</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+            <a href="index.html#about">Our approach</a>
+            <a href="index.html#staff">Our staff</a>
+            <a href="index.html#care">Care &amp; support</a>
+            <a href="careers.html" aria-current="page">Careers</a>
+            <a href="index.html#how-it-works">Getting started</a>
+            <a class="nav-cta" href="index.html#contact">Let's talk <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="careers-hero">
+            <div class="careers-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> Make a difference with us</p>
+                <h1>Bring care and <em>compassion</em> to your work.</h1>
+                <p class="careers-description">At Cherie's Tender Care, our team helps people with developmental disabilities and mental illness build independence and quality of life. If you're interested in contributing to compassionate, person-centered support, we welcome you to apply.</p>
+            </div>
+            <aside class="career-application" aria-labelledby="application-heading">
+                <p class="eyebrow"><span class="eyebrow-line"></span> Take the next step</p>
+                <h2 id="application-heading">Apply to join our team</h2>
+                <p>Download our employment application to get started. Contact our office if you need help accessing the form or would like instructions for returning your completed application.</p>
+                <a class="button button-primary" href="CTC%20Application%20for%20Employment.pdf" download>Download employment application <span>↓</span></a>
+                <p class="career-privacy-note">The application may request sensitive personal information. Please do not send a completed application by email.</p>
+            </aside>
+        </section>
+
+        <section class="career-contact" aria-labelledby="career-contact-heading">
+            <div>
+                <p class="eyebrow"><span class="eyebrow-line"></span> Questions about applying?</p>
+                <h2 id="career-contact-heading">We're happy to help.</h2>
+                <p>Call our office at <a href="tel:+15049458118">(504) 945-8118</a> for application assistance and instructions for returning your completed form.</p>
+            </div>
+            <a class="text-link" href="index.html">Learn more about Cherie's Tender Care <span>→</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="index.html" aria-label="Cherie's Tender Care LLC home">
+            <span class="brand-mark">
+                <svg viewBox="0 0 40 40" fill="none"><path d="M20 33s-13-7.9-13-17a7.5 7.5 0 0 1 13-5.1A7.5 7.5 0 0 1 33 16c0 9.1-13 17-13 17Z" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21h5l2-4 3 8 2-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="brand-name">Cherie's <span>Tender Care LLC</span></span>
+        </a>
+        <p>Care with heart in New Orleans, Louisiana.</p>
+        <a href="index.html">Home</a>
+        <span class="footer-copy">© <span id="year">2026</span> Cherie's Tender Care LLC</span>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector(".navigation");
+
+        menuToggle.addEventListener("click", () => {
+            const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+            menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation" : "Close navigation");
+            navigation.classList.toggle("is-open", !isExpanded);
+        });
+
+        navigation.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation");
+                navigation.classList.remove("is-open");
+            }
+        });
+
+        document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

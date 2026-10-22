@@ -268,6 +268,7 @@ h1, h2, h3, p { margin-top: 0; }
 .service-card p { min-height: 76px; }
 .service-card a { font-size: 9px; }
 .card-highlight { background: var(--green); color: white; }
+.card-highlight-ccw { background: #7a3048; }
 .card-number { position: absolute; top: 29px; right: 27px; color: #a1a394; font-family: var(--serif); font-size: 13px; }
 .card-highlight .card-number { color: rgba(255, 255, 255, .58); }
 .card-icon { display: block; width: 45px; height: 45px; margin-bottom: 24px; color: var(--green); }
@@ -280,6 +281,30 @@ h1, h2, h3, p { margin-top: 0; }
 .card-highlight a { color: #f4d0b7; }
 .care-card a span { font-size: 15px; }
 .care-disclaimer { margin: 22px 0 0; color: var(--muted); font-size: 10px; text-align: center; }
+
+.careers-hero {
+    display: grid;
+    width: min(100% - 96px, 1120px);
+    min-height: 560px;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+    margin: 0 auto;
+    padding: 75px 0;
+}
+.careers-copy h1 { max-width: 620px; margin-bottom: 23px; font-family: var(--serif); font-size: clamp(46px, 5.6vw, 72px); font-weight: 500; letter-spacing: -.045em; line-height: 1.08; }
+.careers-copy h1 em { color: var(--green); font-weight: 500; }
+.careers-description { max-width: 510px; margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.career-application { padding: clamp(27px, 4vw, 43px); border-top: 3px solid var(--green); background: var(--paper); }
+.career-application h2, .career-contact h2 { margin-bottom: 15px; font-family: var(--serif); font-size: clamp(30px, 3.5vw, 42px); font-weight: 500; letter-spacing: -.035em; line-height: 1.15; }
+.career-application > p:not(.eyebrow):not(.career-privacy-note), .career-contact p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.8; }
+.career-application .button { margin: 7px 0 20px; }
+.career-privacy-note { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.career-contact { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding: 65px max(48px, calc((100% - 1120px) / 2)); background: #e9e5d8; }
+.career-contact h2 { margin-bottom: 10px; }
+.career-contact p:not(.eyebrow) { margin-bottom: 0; }
+.career-contact p a { color: var(--green-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.career-contact .text-link { flex: 0 0 auto; }
 
 .quote-section { display: grid; min-height: 320px; align-content: center; justify-items: center; padding: 54px 24px; background: #e9e5d8; text-align: center; }
 .quote-mark { height: 53px; color: var(--coral); font-family: var(--serif); font-size: 80px; line-height: 1; }
@@ -338,6 +363,8 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 900px) {
     .site-header, .hero, .site-footer { width: calc(100% - 56px); }
+    .careers-hero { width: calc(100% - 56px); gap: 35px; }
+    .career-contact { padding-right: 40px; padding-left: 40px; }
     .hero { min-height: 530px; gap: 42px; }
     .photo-frame { height: 370px; }
     .hero-stamp { right: -16px; }
@@ -352,6 +379,11 @@ h1, h2, h3, p { margin-top: 0; }
 @media (max-width: 680px) {
     html { scroll-padding-top: 72px; }
     .site-header { width: calc(100% - 40px); height: 72px; }
+    .careers-hero { width: calc(100% - 48px); min-height: 0; grid-template-columns: 1fr; gap: 35px; padding: 62px 0; }
+    .careers-copy h1 { font-size: clamp(44px, 12vw, 61px); }
+    .career-application { padding: 26px 22px; }
+    .career-application .button { width: 100%; justify-content: space-between; gap: 12px; padding-right: 15px; padding-left: 15px; }
+    .career-contact { align-items: flex-start; flex-direction: column; gap: 23px; padding: 52px 24px; }
     .brand-mark { width: 37px; height: 37px; }
     .brand-name { font-size: 16px; }
     .menu-toggle { display: grid; width: 42px; height: 42px; align-content: center; justify-items: center; gap: 5px; border: 1px solid rgba(94, 32, 53, .28); border-radius: 3px; background: transparent; cursor: pointer; }
